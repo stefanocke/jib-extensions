@@ -10,11 +10,13 @@ The Quarkus app framework prepares a special "runner" JAR and aguments dependenc
 
 Check out the [genenal instructions](../../README.md#using-jib-plugin-extensions) for applying a Jib plugin extension.
 
+Note that `<container><mainClass>` should be set to some placeholder value to suppress Jib warning about missing main class.
+
 ```xml
 <plugin>
   <groupId>com.google.cloud.tools</groupId>
   <artifactId>jib-maven-plugin</artifactId>
-  <version>2.7.1</version>
+  <version>2.8.0</version>
 
   <dependencies>
     <dependency>

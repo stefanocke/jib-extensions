@@ -10,6 +10,8 @@ The Quarkus app framework prepares a special "runner" JAR and aguments dependenc
 
 Check out the [genenal instructions](../../README.md#using-jib-plugin-extensions) for applying a Jib plugin extension.
 
+Note that `container.mainClass` should be set to some placeholder value to suppress Jib warning about missing main class.
+
 ```gradle
 // should be at the top of build.gradle
 buildscript {
@@ -26,7 +28,7 @@ jib {
     mainClass = 'bogus'  // to suppress Jib warning about missing main class
     ...
     jvmFlags = ['-Dquarkus.http.host=0.0.0.0', '-Djava.util.logging.manager=org.jboss.logmanager.LogManager']
-    exposedPorts = [8080]
+    ports = ['8080']
     user = '1001'
   }
   pluginExtensions {
