@@ -17,7 +17,7 @@ The Jib Extension Framework enables anyone to easily extend Jib's behavior to th
    - [Gradle](#using-jib-plugin-extensions-gradle)
 - [Writing Your Own Extensions](#writing-your-own-extensions)
    - [Project Setup](#project-setup)
-   - [Using Dependency Injection (Maven)](using-dependency-injection-maven)
+   - [Using Dependency Injection (Maven)](#using-dependency-injection-maven)
    - [Updating Container Build Plan](#updating-container-build-plan)
    - [Defining Extension-Specific Configuration](#defining-extension-specific-configuration)
    - [Version Matrix](#version-matrix)
