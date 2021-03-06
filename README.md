@@ -219,7 +219,7 @@ The approach described above uses JDK service loader to create the instance of t
 
 1. Instead of `src/main/resources/META-INF/services/com.google.cloud.tools.jib.maven.extension.JibMavenPluginExtension`, create a text file `src/main/resources/META-INF/sisu/javax.inject.Named` and list your classes that implements the Jib Maven Plugin Extension API. Maven dependency injection container needs this file to find the classes to consider. See an example file in [`jib-layer-filter-extension-maven`](https://github.com/GoogleContainerTools/jib-extensions/blob/master/first-party/jib-layer-filter-extension-maven/src/main/resources/META-INF/sisu/javax.inject.Named). Alternatively you can use the [`sisu-maven-plugin`](https://www.eclipse.org/sisu/docs/api/org.eclipse.sisu.mojos/) to generate this file, as described in the [Maven documentation](https://maven.apache.org/maven-jsr330.html#how-to-use-jsr-330-in-plugins).
 
-2. Add the `@javax.inject.Named` and `@javax.inject.Singleton` annotations to your classes that implement the Jib Maven Plugin Extension API to make it Maven components. Use `javax.inject.Inject` annotation on field, constructors or methods to get shared Maven components.
+2. Add the `@javax.inject.Named` and `@javax.inject.Singleton` annotations to your classes that implement the Jib Maven Plugin Extension API to make it Maven components. Use `javax.inject.Inject` annotation on fields, constructors or methods to get shared Maven components.
 
 ```java
 @Named
